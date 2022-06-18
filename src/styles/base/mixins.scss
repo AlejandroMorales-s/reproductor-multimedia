@@ -1,0 +1,65 @@
+@mixin mobile {
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: $desktop){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin btn {
+    border: 2.5px solid $primary;
+    color: $white;
+    font-weight: $semiBold;
+    font-size: 1.6rem;
+    padding: $spacing 4 $spacing 2;
+    margin-top: 3rem;
+    background-color: $primary;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    @include transition(all);
+    &:hover{
+        background-color: transparent;
+        cursor: pointer;
+        color: $primary;
+    }
+}
+
+@mixin secondary-btn {
+    border: 2px solid $primary;
+    color: $primary;
+    font-weight: $semiBold;
+    padding: $spacing/ 4 $spacing/ 2;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    @include transition(all);
+    &:hover{
+        background-color: $primary;
+        cursor: pointer;
+        color: $white;
+    }
+}
+
+@mixin transition($value) {
+    transition: $value 0.1s ease-in;
+    -webkit-transition: $value 0.1s ease-in;
+    -moz-transition: $value 0.1s ease-in;
+    -ms-transition: $value 0.1s ease-in;
+    -o-transition: $value 0.1s ease-in;
+}

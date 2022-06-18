@@ -1,5 +1,11 @@
-$bg: #000;
-h1{
-    color: aqua;
-    background: $bg;
-}
+//* Base
+//* ==================================================
+@import './styles/base/variables.scss';
+@import './styles/base/normalize.scss';
+@import './styles/base/globals.scss';
+@import './styles/base/mixins.scss';
+@import './styles/base/utilities.scss';
+
+
+//* Layout
+//* ==================================================
