@@ -57,9 +57,22 @@
 }
 
 @mixin transition($value) {
-    transition: $value 0.1s ease-in;
-    -webkit-transition: $value 0.1s ease-in;
-    -moz-transition: $value 0.1s ease-in;
-    -ms-transition: $value 0.1s ease-in;
-    -o-transition: $value 0.1s ease-in;
+    transition: $value 0.2s ease-in-out;
+    -webkit-transition: $value 0.2s ease-in-out;
+    -moz-transition: $value 0.2s ease-in-out;
+    -ms-transition: $value 0.2s ease-in-out;
+    -o-transition: $value 0.2s ease-in-out;
+}
+
+@mixin profileImg{
+    height: 4rem;
+    width: 4rem;
+    min-width: 4rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
 }

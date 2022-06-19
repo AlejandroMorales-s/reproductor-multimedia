@@ -97,7 +97,7 @@ export default () => {
             button.container === hamburgerIcon ? 
             button.menu.classList.toggle('show')
             : button.menu.classList.toggle('show-profile-menu');
-            
+
             button.menu.classList.toggle('hidden');
         });
     });

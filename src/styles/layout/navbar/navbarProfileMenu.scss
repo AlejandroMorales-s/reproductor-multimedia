@@ -1,0 +1,60 @@
+.nav-profile-menu-container{
+    position: relative;
+    .nav-img-container{
+        @include profileImg;
+    }
+    .nav-profile-menu{
+        position: absolute;
+        border: 2px solid $lightGray;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        padding: 2rem;
+        background-color: $white;
+        margin-top: 1rem;
+        &>div{
+            display: flex;
+            gap: 1rem;
+            border-bottom: 2px solid $lightGray;
+            padding-bottom: 1rem;
+            .profile-img{
+                @include profileImg;
+            }
+            .profile-name{
+                font-size: 1.5rem;
+                font-weight: $medium;
+            }
+        } 
+        #profile-buttons-container{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 0;
+            gap: 1.5rem;
+            .profile-button{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-weight: $medium;
+                li{
+                    @include transition(all);
+                }
+                svg{
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    stroke: $text;
+                    @include transition(all);
+                }
+                &:last-of-type:hover{
+                    svg{
+                        stroke: $red;
+                    }
+                    li{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
