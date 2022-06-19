@@ -1,0 +1,33 @@
+#navbar-bg{
+    background-color: $white;
+    border-bottom: 2px solid $lightGray;
+    .navbar-container{
+        width: 100%;
+        display: flex;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+.nav-container{
+    gap: 2rem;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .nav-search-input{
+        background: none; 
+        border: 2px solid $primary; 
+        outline: 0;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        width: 56rem;
+        max-width: 90%;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
+}
