@@ -20,6 +20,10 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: ['html-loader']
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ]
     },
