@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "alan",
+        "profile_pic": "https://source.unsplash.com/user/alan",
+        "description": "I am a software engineer"
+    },
+    {
+        "id": 2,
+        "name": "javier",
+        "profile_pic": "https://source.unsplash.com/user/javier",
+        "description": "I am a front-end engineer"
+    },
+    {
+        "id": 3,
+        "name": "juan",
+        "profile_pic": "https://source.unsplash.com/user/juan",
+        "description": "I am a back-end engineer"
+    }
+]
