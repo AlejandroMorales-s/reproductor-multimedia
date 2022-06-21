@@ -1,0 +1,19 @@
+#feed-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 5rem;
+    padding: 2.5rem 0;
+}
+
+@include tablet{
+    #feed-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include mobile{
+    #feed-container{
+        grid-template-columns: 1fr;
+    }
+}

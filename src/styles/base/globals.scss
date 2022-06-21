@@ -9,6 +9,9 @@ html{
     font-family: $font;
     color: $text;
 }
+body{
+    background-color: #f5f5f5;
+}
 *, *:before, *:after{
     box-sizing: inherit;
 }
