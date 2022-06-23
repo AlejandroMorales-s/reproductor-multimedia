@@ -1,0 +1,49 @@
+.video-info-container{
+    padding-top: 2.5rem;
+    .video-interaction-buttons{
+        display: flex;
+        justify-content: end;
+        gap: 1rem;
+        border-bottom: 2px solid $lightGray;
+        padding-bottom: 2.5rem;
+        .video-interaction-button {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        @each $button in $videoInteractionButtons {
+            ##{$button}{
+                height: 2.5em;
+                width: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .video-description-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        border-bottom: 2px solid $lightGray;
+        padding-bottom: 2.5rem;
+        .video-description{
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            .video-creator-container{
+                display: flex; 
+                align-items: center;
+                gap: 1rem;
+                .video-creator-img{
+                    @include profileImg;
+                }
+                .video-creator-name{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

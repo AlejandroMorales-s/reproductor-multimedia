@@ -1,0 +1,37 @@
+.video-container{
+    position: relative;
+    .video{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    .video-buttons{
+        position: absolute;
+        padding: 0 1rem;
+        bottom: 1rem;
+        height: fit-content;
+        width: 50%;
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 0.5rem;
+        #control{
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        @each $button in $videoButtons {
+            ##{$button}{
+                height: 2.5em;
+                width: 2.5rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                stroke: $white;
+                fill: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}

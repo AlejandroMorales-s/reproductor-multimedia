@@ -1,0 +1,25 @@
+#aside-videos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.aside-card-video{
+    display: flex;
+    gap: 1rem;
+    .aside-thumbnail-container{
+        height: 10rem;
+    }
+    .aside-video-description{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .aside-video-title{
+            font-size: 1.6rem;
+            font-weight: $medium;
+            color: $black;
+        }
+        .aside-video-creator{
+            font-size: 1.4rem;
+        }
+    }
+}

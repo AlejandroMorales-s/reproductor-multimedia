@@ -1,0 +1,50 @@
+#commentaries-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    .add-commentary-container{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .add-commentary-photo{
+            @include profileImg;
+        }
+        .add-commentary-input-container{
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+            .add-commentary-input{
+                width: 100%;
+                padding: 0 0.5rem;
+                background-color: transparent;
+                font-size: 1.5rem;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid $lightGray;
+            }
+        }
+    }
+    .commentary{
+        display: flex;
+        gap: 1rem;
+        .commentary-photo{
+            @include profileImg;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;  
+            .commentary-buttons-container{
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
