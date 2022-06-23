@@ -1,5 +1,5 @@
 import view from '../views/home.html';
-const videos = require('../videos.json');
+let videos = require('../videos.json');
 const users = require('../users.json');
 const feedContainer = document.getElementById('app');
 
@@ -9,6 +9,7 @@ const creator = (id) => {
 };
 
 const videosFeed = (container) => {
+    container.innerHTML = '';
     videos.map(video => {
         const {thumbnail, creator_id, name, id} = video;
         let element = `
@@ -27,8 +28,33 @@ const videosFeed = (container) => {
             </div>
         </a>
         `;
-        
+
         container.innerHTML += element;
+    });
+};
+const videosFeedFilter = (container) => {
+    container.innerHTML = '';
+    videos.map(video => {
+        const {thumbnail, creator_id, name, id} = video;
+        let element = `
+        <a href='${`#/v=${id}`}'>
+            <div class='feed-card-video'>
+                <div class='feed-thumbnail-container'>
+                    <img class='feed-thumbnail' src=${thumbnail}>
+                </div>
+                <div class='feed-video-description'>
+                    <img class='feed-video-img' src=${creator(creator_id).profile_pic}>
+                    <div>
+                        <p class='feed-video-title'>${name}</p>
+                        <p class='feed-video-creator'>${creator(creator_id).name}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        `;
+        const div = document.createElement('div');
+        div.innerHTML = element;
+        container.appendChild(div);
     });
 };
 
@@ -40,6 +66,17 @@ export default () => {
     const container = document.getElementById('feed-container');
     
     videosFeed(container);
+    const input = document.getElementById('search-input');
+
+    input.onkeyup = () => {
+        if (input.value === '') {
+            videos = require('../videos.json');
+            videosFeed(container);
+        } else {
+            videos = videos.filter(video => video.name.includes(input.value));
+            videosFeedFilter(container);
+        }
+    }
 
     return div;
 };
