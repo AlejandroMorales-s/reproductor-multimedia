@@ -1,4 +1,6 @@
 import playVideo from '../views/video.html';
+import variables from '../globalVariables';
+let {videosLiked} = variables;
 //* Icons
 import playIcon from '../assets/icons/play.svg';
 import rewindIcon from '../assets/icons/rewind.svg';
@@ -56,14 +58,14 @@ const videoInfo = (video, container) => {
             <div class="video-interaction-container">
                 <h3>${name}</h3>
                 <div class="video-interaction-buttons">
-                <div class="video-interaction-button">
-                    ${likeIcon}
-                    <p>Like</p>
-                </div>
-                <div class="video-interaction-button">
-                    ${dislikeIcon}
-                    <p>Dislike</p>
-                </div>
+                    <div class="video-interaction-button like">
+                        ${likeIcon}
+                        <p>Like</p>
+                    </div>
+                    <div class="video-interaction-button dislike">
+                        ${dislikeIcon}
+                        <p>Dislike</p>
+                    </div>
                 </div>
             </div>
             <div class="video-description-container">   
@@ -88,7 +90,7 @@ const videoInfo = (video, container) => {
 const commentary = (container) => {
     let addCommentary = `
         <div class="add-commentary-container">
-            <img class="add-commentary-photo" src="https://source.unsplash.com/user/alan">
+            <img class="add-commentary-photo" src="https://scontent.fmex31-1.fna.fbcdn.net/v/t1.6435-9/73117783_2530202380535334_6358232631099785216_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEgqbJAC9eL_8TShynDpCzrPDwTlZ_9iy88PBOVn_2LL20wpPdZVYkmXbzW0IMbxIWRndvAk9lRje-h7imbxVPi&_nc_ohc=KLP_w6djpiMAX9nKqHV&_nc_ht=scontent.fmex31-1.fna&oh=00_AT9Iq7WSuGKKzhAJJ8b73Rwc7fQEtOYRBXPSc9nADrVmIg&oe=62DA0494">
             <div class="add-commentary-input-container">
                 <input type="text" class="add-commentary-input" placeholder="Add a commentary">
                 <button class="add-commentary-button">Comment</button>
@@ -102,9 +104,13 @@ const commentary = (container) => {
         const {name, commentary, photo} = comment;
         let element = `
             <div class="commentary">
-                <img class="commentary-photo" src=${photo}>
+                <a href="#/${name}">
+                    <img class="commentary-photo" src=${photo}>
+                </a>
                 <div>
-                    <h4 class="commentary-name">${name}</h4>
+                    <a href="#/${name}">
+                        <h4 class="commentary-name">${name}</h4>
+                    </a>
                     <p class="commentary-info">${commentary}</p>
                     <div class="commentary-buttons-container">
                         ${likeIcon}
@@ -214,6 +220,20 @@ export default () => {
 
     forwardSeconds.onclick = () =>{
         video.currentTime = video.currentTime + 1;
+    };
+
+    //* Video like
+    const like = document.querySelector('.like');
+    const dislike = document.getElementById('dislike');
+
+    like.onclick = () =>{
+        if (videosLiked.some(video => video === videoSet.id)){
+            videosLiked = videosLiked.filter(video => video !== videoSet.id);
+            like.classList.remove('liked');
+        } else {
+            videosLiked.push(videoSet.id);
+            like.classList.add('liked');
+        };
     };
     
     return div;

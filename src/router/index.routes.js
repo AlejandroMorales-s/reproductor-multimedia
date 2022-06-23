@@ -1,5 +1,5 @@
 import {pages} from '../controllers/index';
-const {home, notFound, video, channel} = pages;
+const {home, notFound, video, channel, videosLiked} = pages;
 let app = document.getElementById('app');
 
 const router = (route, id, creatorName) => {
@@ -14,6 +14,9 @@ const router = (route, id, creatorName) => {
         case '#/contact':
             console.log('Contact');
             break;
+        case `#/liked`: {
+            return app.appendChild(videosLiked());
+        }
         case `#/v=${id}`: {
             return app.appendChild(video());
         }

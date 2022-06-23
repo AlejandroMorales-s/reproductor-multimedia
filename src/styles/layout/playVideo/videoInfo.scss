@@ -6,18 +6,30 @@
         gap: 1rem;
         border-bottom: 2px solid $lightGray;
         padding-bottom: 2.5rem;
+        .liked{
+            @each $button in $videoInteractionButtons {
+                ##{$button}{
+                    height: 2.5em;
+                    width: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    stroke: $primary;
+                }
+            }
+        }
         .video-interaction-button {
             display: flex;
             align-items: center;
             cursor: pointer;
-        }
-        @each $button in $videoInteractionButtons {
-            ##{$button}{
-                height: 2.5em;
-                width: 2.5rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            @each $button in $videoInteractionButtons {
+                ##{$button}{
+                    height: 2.5em;
+                    width: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }

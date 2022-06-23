@@ -1,0 +1,6 @@
+#videos-liked-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2.5rem 0;
+    gap: 2.5rem;
+}
