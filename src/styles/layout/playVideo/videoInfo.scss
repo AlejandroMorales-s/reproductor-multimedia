@@ -45,6 +45,9 @@
             justify-content: space-between;
             gap: 1rem;
             margin-top: 2.5rem;
+            button{
+                @include btn;
+            }
             .video-creator-container{
                 display: flex; 
                 align-items: center;
@@ -53,7 +56,9 @@
                     @include profileImg;
                 }
                 .video-creator-name{
-                    font-size: 1.4rem;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: $black;
                 }
             }
         }
