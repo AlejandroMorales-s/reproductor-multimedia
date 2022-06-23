@@ -1,0 +1,26 @@
+#channel-container{
+    .channel-header-container{
+        .channel-header-cover-image{
+            height: 30rem;
+        }
+        .channel-header-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-top: 2.5rem;
+                img{
+                    @include profileImg;
+                    height: 15rem;
+                    width: 15rem;
+                }
+            }
+            button{
+                @include btn;
+            }
+        }
+    }
+}

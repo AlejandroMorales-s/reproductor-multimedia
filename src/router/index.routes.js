@@ -1,8 +1,8 @@
 import {pages} from '../controllers/index';
-const {home, notFound, video} = pages;
+const {home, notFound, video, channel} = pages;
 let app = document.getElementById('app');
 
-const router = (route, id) => {
+const router = (route, id, creatorName) => {
     app.innerHTML = '';
     switch (route) {
         case '#/': {
@@ -14,8 +14,12 @@ const router = (route, id) => {
         case '#/contact':
             console.log('Contact');
             break;
-        case `#/v=${id}`:
+        case `#/v=${id}`: {
             return app.appendChild(video());
+        }
+        case `#/${creatorName}`: {
+            return app.appendChild(channel());
+        }
         default:
             console.log('404');
             break;

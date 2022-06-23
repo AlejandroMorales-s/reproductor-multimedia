@@ -6,5 +6,6 @@ navbar();
 router(window.location.hash);
 window.addEventListener('hashchange', () => {
     const id = window.location.hash.substring(4);
-    router(window.location.hash, id);
+    const creatorName = window.location.hash.substring(2);
+    router(window.location.hash, id, creatorName);
 })
