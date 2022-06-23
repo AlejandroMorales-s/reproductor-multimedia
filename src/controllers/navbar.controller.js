@@ -35,7 +35,7 @@ const hamburgerMenuButtons = [
 const profileMenuButtons = [
     {
         name: 'My channel',
-        href: '#/my-channel',
+        href: '#/Alejandro Morales',
         icon: account
     },
     {
@@ -104,7 +104,7 @@ export default () => {
 
     //* Add src to profile img
     profileImg.forEach(img => {
-        img.setAttribute('src', 'https://source.unsplash.com/user/alan');
+        img.setAttribute('src', 'https://scontent.fmex31-1.fna.fbcdn.net/v/t1.6435-9/73117783_2530202380535334_6358232631099785216_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEgqbJAC9eL_8TShynDpCzrPDwTlZ_9iy88PBOVn_2LL20wpPdZVYkmXbzW0IMbxIWRndvAk9lRje-h7imbxVPi&_nc_ohc=KLP_w6djpiMAX9nKqHV&_nc_ht=scontent.fmex31-1.fna&oh=00_AT9Iq7WSuGKKzhAJJ8b73Rwc7fQEtOYRBXPSc9nADrVmIg&oe=62DA0494');
     });
         
     return navbarContainer;
