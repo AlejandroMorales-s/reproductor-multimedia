@@ -15,19 +15,40 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    .nav-search-input{
-        background: none; 
-        border: 2px solid $primary; 
-        outline: 0;
-        height: 3.5rem;
-        border-radius: 0.5rem;
-        -webkit-border-radius: 0.5rem;
-        -moz-border-radius: 0.5rem;
-        -ms-border-radius: 0.5rem;
-        -o-border-radius: 0.5rem;
-        width: 56rem;
-        max-width: 90%;
-        padding: 0 1rem;
-        font-size: 1.5rem;
+    #navbar-input-container{
+        position: relative;
+        .nav-search-input{
+            background: none;
+            border: 2px solid $primary;
+            outline: 0;
+            height: 3.5rem;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+            width: 56rem;
+            max-width: 90%;
+            padding: 0 1rem;
+            font-size: 1.5rem;
+            position: relative;
+        }
+        svg{
+            height: 2.5rem;
+            width: 2.5rem;
+            cursor: pointer;
+            stroke: $white;
+            position: absolute;
+            top: 0;
+            right: 5.5rem;
+            background-color: $primary;
+            height: 3.5rem;
+            width: 4.5rem;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+        }
     }
 }

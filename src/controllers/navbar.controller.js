@@ -6,6 +6,7 @@ import like from '../assets/icons/like.svg';
 import headphones from '../assets/icons/headphones.svg';
 import account from '../assets/icons/account.svg';
 import logout from '../assets/icons/logout.svg';
+import searchIcon from '../assets/icons/search.svg';
 
 const navbarContainer = document.getElementById('navbar-bg');
 
@@ -75,6 +76,14 @@ export default () => {
     const profileButtons = document.getElementById('nav-profile-menu');
     
     const profileImg = document.querySelectorAll('.profile-img');
+
+    const inputContainer = document.getElementById('navbar-input-container');
+
+    const divSearchIcon = document.createElement('div');
+    divSearchIcon.innerHTML = searchIcon;
+
+    inputContainer.appendChild(divSearchIcon);
+
 
     //* Add buttons
     addButtons(buttonsContainer, hamburgerMenuButtons, 'navbar-button');
