@@ -15,6 +15,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    h1{
+        color: $primary;
+    }
     #navbar-input-container{
         position: relative;
         .nav-search-input{
@@ -56,14 +59,13 @@
         #navbar-input-container{
             position: relative;
             height: 100%;
-            width: 100%;
+            width: 5rem;
             .nav-search-input{
                 display: none;
                 position: absolute;
-                left: -12.5rem;
+                left: -20rem;
                 top: 1.5rem;
-                right: 0;
-                min-width: 190%;
+                min-width: 25rem;
                 background-color: $white;
             }
             svg{
