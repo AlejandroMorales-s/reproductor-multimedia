@@ -4,3 +4,9 @@
     grid-template-columns: repeat(4, 1fr);
     margin: 2.5rem auto;
 }
+
+@include mobile {
+    #subscriptions-container{
+        grid-template-columns: 1fr;
+    }
+}

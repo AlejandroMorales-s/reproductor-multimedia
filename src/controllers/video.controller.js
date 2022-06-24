@@ -280,15 +280,12 @@ export default () => {
     })
 
     //* Subscribe
-    console.log(videoSet.creator_id); 
     const subscribeButton = document.getElementById('subscribe-button-video');
     subscribeButton.addEventListener('click', () => {
         if (subscriptions.some(sub => sub === videoSet.creator_id)){
             subscriptions = subscriptions.filter(sub => sub !== videoSet.creator_id);
-            console.log(subscriptions); 
         } else {
             subscriptions.push(videoSet.creator_id);
-            console.log(subscriptions); 
         };
         subscribeText();
     });

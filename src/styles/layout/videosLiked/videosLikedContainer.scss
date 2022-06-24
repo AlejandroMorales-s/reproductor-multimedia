@@ -4,3 +4,9 @@
     padding: 2.5rem 0;
     gap: 2.5rem;
 }
+
+@include mobile {
+    #videos-liked-container{
+        grid-template-columns: 1fr;
+    }
+}

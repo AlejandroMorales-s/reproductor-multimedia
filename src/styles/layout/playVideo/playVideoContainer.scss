@@ -4,3 +4,9 @@
     gap: 2rem;
     margin-top: 2.5rem;
 }
+
+@include mobile {
+    #play-video{
+        grid-template-columns: 1fr;
+    }
+}
