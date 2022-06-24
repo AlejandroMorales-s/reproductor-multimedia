@@ -3,6 +3,7 @@ import variables from '../globalVariables';
 let {videosLiked, subscriptions} = variables;
 //* Icons
 import playIcon from '../assets/icons/play.svg';
+import pauseIcon from '../assets/icons/pause.svg';
 import rewindIcon from '../assets/icons/rewind.svg';
 import forwardIcon from '../assets/icons/forward.svg';
 import fullscreenIcon from '../assets/icons/fullscreen.svg';
@@ -36,7 +37,7 @@ const setVideo = (video, container) => {
                 <source src="${url}" type="video/mp4">
                 <p>Your browser does not support the video</p>
             </video>
-            <div class="video-buttons">
+            <div id="video-buttons" class="video-buttons">
                 ${rewindIcon}
                 ${playIcon}
                 ${forwardIcon}
@@ -70,10 +71,12 @@ const videoInfo = (video, container) => {
             </div>
             <div class="video-description-container">   
                 <div class='video-description'>
-                    <div class="video-creator-container">
-                        <img class='video-creator-img' src=${creator(creator_id).profile_pic}>
-                        <p class='video-creator-name'>${creator(creator_id).name}</p>
-                    </div>
+                    <a href="#/${creator(creator_id).name}">
+                        <div class="video-creator-container">
+                            <img class='video-creator-img' src=${creator(creator_id).profile_pic}>
+                            <p class='video-creator-name'>${creator(creator_id).name}</p>
+                        </div>
+                    </a>
                     <button id="subscribe-button-video">Subscribe</button>
                 </div>
                 <p>${description}</p>
@@ -189,11 +192,35 @@ export default () => {
     //* Video play/pause
     play.onclick = ()=>{
         if(video.paused){
-            video.play()
-        }else{
-            video.pause()
+            video.play();
+            play.innerHTML = pauseIcon;
+        } else {
+            video.pause();
+            play.innerHTML = playIcon;
         };
     };
+
+    video.onclick = ()=>{
+        if(video.paused){
+            video.play();
+            play.innerHTML = pauseIcon;
+        } else {
+            video.pause();
+            video.muted = true;
+            play.innerHTML = playIcon;
+        };
+    };
+
+    video.addEventListener("dblclick",(e)=>{
+        let doubleClickedPlace = e.layerX; 
+        let videoArea = e.path[0].clientWidth; 
+        
+        if (doubleClickedPlace > videoArea / 2){
+            video.currentTime = video.currentTime + 5;
+        } else {
+            video.currentTime = video.currentTime - 5;
+        }
+    });
 
     //* Video fullscreen
     const fullscreen = document.getElementById('fullscreen-button');
@@ -215,11 +242,11 @@ export default () => {
     const forwardSeconds = document.getElementById('forward-button');
 
     rewindSeconds.onclick = () =>{
-        video.currentTime = video.currentTime - 1;
+        video.currentTime = video.currentTime - 5;
     };
 
     forwardSeconds.onclick = () =>{
-        video.currentTime = video.currentTime + 1;
+        video.currentTime = video.currentTime + 5;
     };
 
     //* Video like
@@ -235,6 +262,22 @@ export default () => {
             like.classList.add('liked');
         };
     };
+
+    //* Video buttons appear/disappear
+    const videoButtons = document.getElementById('video-buttons');
+
+    videoButtons.addEventListener("mousemove",()=>{
+        videoButtons.style.opacity = 1;
+    })
+    videoButtons.addEventListener("mouseout",()=>{
+        setTimeout(()=>{
+            if (video.paused) {
+                videoButtons.style.opacity = 1;
+            } else {
+                videoButtons.style.opacity = 0;
+            }
+        }, 3000);
+    })
 
     //* Subscribe
     const subscribeButton = document.getElementById('subscribe-button-video');

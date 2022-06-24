@@ -8,10 +8,11 @@ $medium: 500;
 $semiBold: 600;
 
 // Colors
-$primary: #2589bd;
+$primary: #9341dd;
 $lightGray: #dcdcdc;
 $white: #ffffff;
 $black: #000000;
+$blackBg: rgba(0, 0, 0, 0.5);
 $text: #6B7280;
 $red: #ff0000;
 
@@ -27,5 +28,5 @@ $spacing: 5rem;
 $fontSize: (4rem, 2.4rem, 2.6rem, 1.6rem);
 
 // Video Buttons
-$videoButtons: ("play-button", "forward-button", "rewind-button", "fullscreen-button");
+$videoButtons: ("play-button", "pause-button", "forward-button", "rewind-button", "fullscreen-button");
 $videoInteractionButtons: ("dislike-button", "like-button");
