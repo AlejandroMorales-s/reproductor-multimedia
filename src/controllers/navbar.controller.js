@@ -1,6 +1,6 @@
 import navbar from '../views/navbar.html';
 import variables from '../globalVariables';
-const {subscriptions} = variables;
+let {subscriptions} = variables;
 const users = require('../users.json');
 //* Icons
 import home from '../assets/icons/home.svg';

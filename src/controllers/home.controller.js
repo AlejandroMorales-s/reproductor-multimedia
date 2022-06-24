@@ -59,9 +59,11 @@ export default () => {
     inputIcon.onclick = () => {
         window.location.href = `#/`;
         if (input.value === '') {
+            input.style.display = 'block';
             videos = require('../videos.json');
             videosFeed(container);
         } else {
+            input.style.display = 'block';
             videos = require('../videos.json');
             videos = videos.filter(video => video.name.includes(input.value));
             videosFeedFilter(container);
