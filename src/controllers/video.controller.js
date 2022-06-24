@@ -1,6 +1,6 @@
 import playVideo from '../views/video.html';
 import variables from '../globalVariables';
-let {videosLiked} = variables;
+let {videosLiked, subscriptions} = variables;
 //* Icons
 import playIcon from '../assets/icons/play.svg';
 import rewindIcon from '../assets/icons/rewind.svg';
@@ -74,7 +74,7 @@ const videoInfo = (video, container) => {
                         <img class='video-creator-img' src=${creator(creator_id).profile_pic}>
                         <p class='video-creator-name'>${creator(creator_id).name}</p>
                     </div>
-                    <button>Subscribe</button>
+                    <button id="subscribe-button-video">Subscribe</button>
                 </div>
                 <p>${description}</p>
             </div>
@@ -235,6 +235,12 @@ export default () => {
             like.classList.add('liked');
         };
     };
+
+    //* Subscribe
+    const subscribeButton = document.getElementById('subscribe-button-video');
+    subscribeButton.addEventListener('click', () => {
+        subscriptions.push(videoSet.creator_id);
+    });
     
     return div;
 };

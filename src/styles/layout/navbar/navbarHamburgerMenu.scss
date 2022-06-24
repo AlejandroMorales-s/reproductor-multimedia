@@ -25,6 +25,21 @@
                 padding-bottom: 0.5rem;
                 border-bottom: 2px solid $lightGray;
             }
+            .subscriptions-container-navbar{
+                a .subscription-card-navbar{
+                    display: flex;
+                    gap: 1rem;
+                    padding: 1rem 0;
+                    align-items: center;
+                    .subscription-card-navbar-img-container{
+                        @include profileImg;
+                    }
+                    .subscription-card-navbar-name{
+                        font-weight: $medium;
+                        color: $black;
+                    }
+                }
+            }
         }
         .navbar-buttons-container{
             display: flex;
