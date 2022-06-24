@@ -10,7 +10,7 @@
     {
         "id": 2,
         "creator_id": 1,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1638913971251-832d29947de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
         "name": "video 2",
         "url": "https://static.videezy.com/system/resources/previews/000/032/846/original/girllistensong1.mp4",
         "description": "This is a video about dogs"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "creator_id": 2,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1656072724484-ff6f81892c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
         "name": "video 3",
         "url": "https://static.videezy.com/system/resources/previews/000/033/826/original/pattaya-aerial-view30.mp4",
         "description": "This is a video about cats"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "creator_id": 2,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1588395499472-93733997e55a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1046&q=80",
         "name": "video 4",
         "url": "https://static.videezy.com/system/resources/previews/000/018/948/original/ICON-VERSION8_1.mp4",
         "description": "This is a video about dogs"
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "creator_id": 3,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1639246360642-1fb887679c35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "name": "video 5",
         "url": "https://static.videezy.com/system/resources/previews/000/012/979/original/record_player_011.mp4",
         "description": "This is a video about cats"
@@ -42,7 +42,7 @@
     {
         "id": 6,
         "creator_id": 4,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1655998233171-ee5b130acba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=399&q=80",
         "name": "video 6",
         "url": "https://static.videezy.com/system/resources/previews/000/033/826/original/pattaya-aerial-view30.mp4",
         "description": "This is a video about cats"
@@ -50,7 +50,7 @@
     {
         "id": 7,
         "creator_id": 4,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1644982652061-df82282e178d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "name": "video 7",
         "url": "https://static.videezy.com/system/resources/previews/000/018/948/original/ICON-VERSION8_1.mp4",
         "description": "This is a video about dogs"
@@ -58,7 +58,7 @@
     {
         "id": 8,
         "creator_id": 4,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1631480221159-d9dbb417b15f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
         "name": "nane 2",
         "url": "https://static.videezy.com/system/resources/previews/000/012/979/original/record_player_011.mp4",
         "description": "This is a video about cats"
@@ -66,7 +66,7 @@
     {
         "id": 9,
         "creator_id": 5,
-        "thumbnail": "https://images.unsplash.com/photo-1655684936485-7ffa09ccea65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1648737119247-e93f56878edf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
         "name": "nano",
         "url": "https://static.videezy.com/system/resources/previews/000/034/644/original/Boy_plane8.mp4",
         "description": "This is a video about dogs"
